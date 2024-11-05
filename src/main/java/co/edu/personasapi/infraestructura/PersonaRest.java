@@ -24,7 +24,6 @@ import org.springframework.web.bind.annotation.RestController;
 * @author nixod
 */
 
-//hola saludos
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -65,7 +64,7 @@ public class PersonaRest {
  public Personas delete(@PathVariable("id") int id){
  return service.delete(id);
  }
-
+ //hola
  @GetMapping("/submit/tp")
  public List<TipoPersona> listarTp(){
  return tpservice.listar();
