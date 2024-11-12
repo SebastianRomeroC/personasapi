@@ -23,7 +23,7 @@ public class Personas {
  @Column
  private String apellidos_p;
  @Column
- private int id_tp;
+ private int id_to_p;
 
  public int getId() {
  return id_p;
@@ -44,9 +44,9 @@ public class Personas {
  this.apellidos_p = apellidos;
  }
  public int getId_tp() {
- return id_tp;
+ return id_to_p;
  }
  public void setId_tp(int id_tp) {
- this.id_tp = id_tp;
+ this.id_to_p = id_tp;
  }
 }
