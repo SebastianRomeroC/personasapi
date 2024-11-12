@@ -32,7 +32,7 @@ public class TipoPersona {
     }
 
     public void setId_tp(int id_tp) {
-        this.id_tp = id_tp;
+        this.id_tp = id_tp; 
     }
 
     public String getNombre_tp() {
