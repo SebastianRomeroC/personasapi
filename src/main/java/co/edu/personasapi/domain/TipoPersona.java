@@ -16,7 +16,7 @@ import jakarta.persistence.Table;
  * @author nixod
  */
 @Entity
-@Table(name = "tipo_personas")
+@Table(name = "tipo_persona")
 public class TipoPersona {
 
     @Id
