@@ -21,7 +21,7 @@ public class Personas {
  private String nombre_p;
 
  @Column
- private String apellidos_p;
+ private String apellido_p;
  @Column
  private int id_tp;
 
@@ -38,10 +38,10 @@ public class Personas {
  this.nombre_p = nombres;
  }
  public String getApellidos() {
- return apellidos_p;
+ return apellido_p;
  }
  public void setApellidos(String apellidos) {
- this.apellidos_p = apellidos;
+ this.apellido_p = apellidos;
  }
  public int getId_tp() {
  return id_tp;
