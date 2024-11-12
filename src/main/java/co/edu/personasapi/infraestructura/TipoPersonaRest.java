@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 */
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping({"/tipopersonasrest"})
+@RequestMapping({"/tipopersonas"})
 public class TipoPersonaRest {
  @Autowired
  PersonaService service;
