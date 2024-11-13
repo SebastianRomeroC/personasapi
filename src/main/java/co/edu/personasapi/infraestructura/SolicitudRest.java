@@ -9,7 +9,7 @@ import java.util.List;
  
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/solicitudesrest")
+@RequestMapping("/solicitudes")
 public class SolicitudRest {
  
     @Autowired
