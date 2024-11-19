@@ -26,7 +26,7 @@ public class Solicitud {
     private String estado;
  
     @Column
-    private String fechaSolicitud;
+    private String fecha_solicitud;
  
     // Getters y setters
     public int getId_solicitud() {
@@ -54,10 +54,10 @@ public class Solicitud {
     }
  
     public String getFechaSolicitud() {
-        return fechaSolicitud;
+        return fecha_solicitud;
     }
  
     public void setFechaSolicitud(String fechaSolicitud) {
-        this.fechaSolicitud = fechaSolicitud;
+        this.fecha_solicitud = fechaSolicitud;
     }
 }
