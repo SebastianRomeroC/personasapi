@@ -32,7 +32,7 @@ public class TipoPersona {
     }
 
     public void setId_tp(int id_tp) {
-        this.id_tp = id_tp; 
+        this.id_tp = id_tp;
     }
 
     public String getNombre_tp() {
@@ -44,7 +44,6 @@ public class TipoPersona {
     }
 
     public void setId(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.id_tp = id;
     }
-
 }
