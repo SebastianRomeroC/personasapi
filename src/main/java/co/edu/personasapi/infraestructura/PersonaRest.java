@@ -69,4 +69,12 @@ public class PersonaRest {
  public List<TipoPersona> listarTp(){
  return tpservice.listar();
  }
+ 
+   @Autowired
+    private PersonaService personaService;
+
+    @PostMapping
+    public Personas crearPersona(@RequestBody Personas persona) {
+        return personaService.crearPersona(persona);
+    }
 }

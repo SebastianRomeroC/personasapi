@@ -21,4 +21,6 @@ public interface PersonaService {
     Personas edit(Personas p);
 
     Personas delete(int id);
+    
+    Personas crearPersona(Personas p);
 }

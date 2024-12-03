@@ -4,6 +4,7 @@
  */
 package co.edu.personasapi.domain;
 import java.util.List;
+import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 /**
@@ -39,4 +40,12 @@ public class PersonaServiceImp implements PersonaService{
      return p;
  }
 
+ @Override
+    public Personas crearPersona(Personas personas) {
+        String codigoUnico = UUID.randomUUID().toString().replace("-", "").substring(0, 5);
+        personas.setCodigoUnico(codigoUnico);
+
+        return repositorio.save(personas);
+    }
+ 
 }
