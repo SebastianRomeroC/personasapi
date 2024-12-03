@@ -79,7 +79,6 @@ public class PersonaRest {
     public Map<String, Object> crearPersona(@RequestBody Personas persona) {
         Personas nuevaPersona = personaService.crearPersona(persona);
 
-        // Crear la respuesta JSON manualmente, excluyendo el código único
         Map<String, Object> response = new HashMap<>();
         response.put("id", nuevaPersona.getId());
         response.put("nombre", nuevaPersona.getNombres());
