@@ -27,7 +27,7 @@ public class Personas {
     @Column
     private int id_to_p;
 
-    @Column
+    @Column(name = "codigo_unico")
     private String codigoUnico;
 
     public int getId() {

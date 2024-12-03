@@ -8,7 +8,9 @@ import co.edu.personasapi.domain.Personas;
 import co.edu.personasapi.domain.PersonaService;
 import co.edu.personasapi.domain.TipoPersona;
 import co.edu.personasapi.domain.TipoPersonaService;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -73,8 +75,15 @@ public class PersonaRest {
    @Autowired
     private PersonaService personaService;
 
-    @PostMapping
-    public Personas crearPersona(@RequestBody Personas persona) {
-        return personaService.crearPersona(persona);
+     @PostMapping
+    public Map<String, Object> crearPersona(@RequestBody Personas persona) {
+        Personas nuevaPersona = personaService.crearPersona(persona);
+
+        // Crear la respuesta JSON manualmente, excluyendo el código único
+        Map<String, Object> response = new HashMap<>();
+        response.put("id", nuevaPersona.getId());
+        response.put("nombre", nuevaPersona.getNombres());
+
+        return response;
     }
 }
