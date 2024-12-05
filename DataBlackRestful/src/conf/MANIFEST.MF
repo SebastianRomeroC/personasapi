@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+db.url=jdbc:mysql://localhost:3306/backend
+db.user=root
+db.password=
