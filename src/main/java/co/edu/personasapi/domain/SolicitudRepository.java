@@ -16,4 +16,7 @@ public interface SolicitudRepository extends Repository<Solicitud, Integer> {
     Solicitud save(Solicitud solicitud);
  
     void delete(Solicitud solicitud);
+    
+    int countByEstado(String estado);
+    
 }

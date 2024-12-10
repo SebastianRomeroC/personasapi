@@ -14,6 +14,9 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "solicitudes")
 public class Solicitud {
+
+    public Solicitud(int par, String aceptada) {
+    }
  
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

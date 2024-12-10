@@ -2,6 +2,7 @@ package co.edu.personasapi.infraestructura;
  
 import co.edu.personasapi.domain.Solicitud;
 import co.edu.personasapi.domain.SolicitudService;
+import java.util.HashMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
  
 import java.util.List;
+import java.util.Map;
  
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -52,5 +54,22 @@ public class SolicitudRest {
     @DeleteMapping("/submit/{id}")
     public Solicitud eliminar(@PathVariable("id") int id) {
         return solicitudService.delete(id);
+    }
+    
+    @GetMapping("/submit/total")
+    public Map<String, Object> obtenerEstadisticas() {
+        Map<String, Object> response = new HashMap<>();
+
+        int totalSolicitudes = solicitudService.obtenerTodas().size();
+        int aceptadas = solicitudService.contarPorEstado("aceptada");
+        int rechazadas = solicitudService.contarPorEstado("rechazada");
+        int pendientes = solicitudService.contarPorEstado("pendiente");
+
+        response.put("totalSolicitudes", totalSolicitudes);
+        response.put("aceptadas", aceptadas);
+        response.put("rechazadas", rechazadas);
+        response.put("pendientes", pendientes);
+
+        return response;
     }
 }

@@ -17,4 +17,8 @@ public interface SolicitudService {
     Solicitud edit(Solicitud solicitud);
  
     Solicitud delete(int id);
+    
+    List<Solicitud> obtenerTodas();
+     
+    int contarPorEstado(String estado);
 }

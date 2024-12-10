@@ -12,7 +12,11 @@ import org.springframework.stereotype.Service;
 public class SolicitudServiceImp implements SolicitudService {
  
     @Autowired
-    private SolicitudRepository solicitudRepository;
+    private final SolicitudRepository solicitudRepository;
+    
+     public SolicitudServiceImp(SolicitudRepository solicitudRepository) {
+        this.solicitudRepository = solicitudRepository;
+    }
  
     @Override
     public List<Solicitud> listar() {
@@ -41,5 +45,15 @@ public class SolicitudServiceImp implements SolicitudService {
             solicitudRepository.delete(solicitud);
         }
         return solicitud;
+    }
+    
+    @Override
+    public List<Solicitud> obtenerTodas() {
+        return solicitudRepository.findAll();
+    }
+    
+    @Override
+    public int contarPorEstado(String estado) {
+        return solicitudRepository.countByEstado(estado);
     }
 }

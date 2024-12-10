@@ -63,12 +63,11 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <mainClass>co.edu.personasapi</mainClass>
+                            <mainClass>co.edu.personasapi.PersonasApiApplication</mainClass>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
-
 </project>
